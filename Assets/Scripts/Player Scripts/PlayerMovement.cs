@@ -33,7 +33,7 @@ public class PlayerMovement : MonoBehaviour
         moveInput = InputSystem.actions.FindAction("Move");
 
         Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = false;
+        Cursor.visible = true;
 
         currentMoveSpeed = moveSpeed;
     }
