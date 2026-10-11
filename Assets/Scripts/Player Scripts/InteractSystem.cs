@@ -11,7 +11,7 @@ public interface IInteract
 public class InteractSystem : MonoBehaviour
 {
     public Camera cam;
-    public float dist = 10f;
+    public float dist = 50f;
 
     private IInteract current;
     private Renderer r;
