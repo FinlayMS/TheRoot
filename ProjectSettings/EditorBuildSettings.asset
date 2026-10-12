@@ -24,6 +24,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Levels/Level2_Forest.unity
     guid: a04a609971cc9eb4693b56445471c221
   - enabled: 1
+    path: Assets/Scenes/Menu/Level Transitions/Level2_Level3.unity
+    guid: 9fa805f998d0e054f83c5a3275946fad
+  - enabled: 1
     path: Assets/Scenes/Levels/Level3_Cavern.unity
     guid: 732404c15fbe63c49bcf649494a64278
   - enabled: 1
