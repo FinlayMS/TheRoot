@@ -9,10 +9,9 @@ public class Level2Trigger : MonoBehaviour
     {
         counter = allGone.GetComponent<RootsDestroyed1>();
     }
-    void OnTriggerEnter(Collider other)
-    {
-        if (counter.rootsGoneTotal >= 6)
-            Debug.Log("Trigger entered by " + other.gameObject.name);
-            SceneManager.LoadScene("Level2_Forest");
-    }
+   // void OnTriggerEnter(Collider other)
+  //  {
+   //     if (counter.rootsGoneTotal >= 6)
+   //         SceneManager.LoadScene("Level2_Forest");
+   // }
 }
