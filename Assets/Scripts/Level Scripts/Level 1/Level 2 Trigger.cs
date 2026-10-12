@@ -3,15 +3,15 @@ using UnityEngine.SceneManagement;
 
 public class Level2Trigger : MonoBehaviour
 {
-    public GameObject allGone;
-    private RootsDestroyed1 counter;
+    public GameObject totalRootCounter;
+    private TotalRootAreas counter;
     void Start()
     {
-        counter = allGone.GetComponent<RootsDestroyed1>();
+        counter = totalRootCounter.GetComponent<TotalRootAreas>();
     }
-   // void OnTriggerEnter(Collider other)
-  //  {
-   //     if (counter.rootsGoneTotal >= 6)
-   //         SceneManager.LoadScene("Level2_Forest");
-   // }
+    void OnTriggerEnter(Collider player)
+    {
+        if (counter.activateLevel2Trigger == true)
+            SceneManager.LoadScene("Level2_Forest");
+    }
 }
