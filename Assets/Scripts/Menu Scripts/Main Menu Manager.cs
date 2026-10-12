@@ -4,6 +4,7 @@ public class MainMenuManager : MonoBehaviour
 {
     public void LoadScene(string sceneName)
     {
+        Debug.Log("Level loaded");
         SceneManager.LoadScene(sceneName);
     }
 

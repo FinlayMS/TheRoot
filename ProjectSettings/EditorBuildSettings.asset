@@ -18,6 +18,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Levels/Level1_Cabin.unity
     guid: 030384afdf4faf64fa1f42805a78ab54
   - enabled: 1
+    path: Assets/Scenes/Menu/Level Transitions/Level1_Level2.unity
+    guid: d1c72c8bf0b166749b897ae08b7153c2
+  - enabled: 1
     path: Assets/Scenes/Levels/Level2_Forest.unity
     guid: a04a609971cc9eb4693b56445471c221
   - enabled: 1

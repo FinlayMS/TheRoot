@@ -12,6 +12,7 @@ public class Level2Trigger : MonoBehaviour
     void OnTriggerEnter(Collider player)
     {
         if (counter.activateLevel2Trigger == true)
-            SceneManager.LoadScene("Level2_Forest");
+            Debug.Log("level transition triggered");
+            SceneManager.LoadScene("Level1_Level2");
     }
 }
