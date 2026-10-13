@@ -35,6 +35,7 @@ public class TotalRootAreas : MonoBehaviour
     void Update()
     {
         totalRootAreasDestroyed = AreRootAreasDestroyed1(totalRootAreasDestroyed);
+        totalRootAreasDestroyed = AreRootAreasDestroyed2(totalRootAreasDestroyed);
         activateLevel2Trigger = AllRootsDestroyed(totalRootAreasDestroyed, activateLevel2Trigger);
     }
 
@@ -61,7 +62,7 @@ public class TotalRootAreas : MonoBehaviour
         return totalRoots;
     }
 
-    public int AreRootsDestroyed2(int totalRoots)
+    public int AreRootAreasDestroyed2(int totalRoots)
     {
         if (areaDestroyed4.totalRootsDestroyed == 1)
         {
