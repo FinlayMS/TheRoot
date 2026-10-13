@@ -19,7 +19,7 @@ public class RemoveText : MonoBehaviour
     {
         if (bool_script.byebyeText == true)
         {
-            Destroy(gameObject);
+            byebye.SetActive(false);
         }
     }
 }

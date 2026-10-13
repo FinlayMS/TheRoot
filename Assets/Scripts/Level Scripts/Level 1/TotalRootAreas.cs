@@ -34,47 +34,52 @@ public class TotalRootAreas : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        totalRootAreasDestroyed = AreRootAreasDestroyed(totalRootAreasDestroyed);
+        totalRootAreasDestroyed = AreRootAreasDestroyed1(totalRootAreasDestroyed);
         activateLevel2Trigger = AllRootsDestroyed(totalRootAreasDestroyed, activateLevel2Trigger);
     }
 
-    public int AreRootAreasDestroyed(int totalRoots)
+    public int AreRootAreasDestroyed1(int totalRoots)
     {
-        if (areaDestroyed1.totalRootsBool == true)
+        if (areaDestroyed1.totalRootsDestroyed == 1)
         {
             totalRoots += 1;
-            areaDestroyed1.totalRootsBool = false;
-            Debug.Log("roots destroyed #" + totalRoots);
+            areaDestroyed1.totalRootsDestroyed = 0;
+            Debug.Log("root area 1, roots destroyed #" + totalRoots);
         }
-        else if (areaDestroyed2.totalRootsBool == true)
+        else if (areaDestroyed2.totalRootsDestroyed == 1)
         {
             totalRoots += 1;
-            areaDestroyed2.totalRootsBool = false;
-            Debug.Log("roots destroyed #" + totalRoots);
+            areaDestroyed2.totalRootsDestroyed = 0;
+            Debug.Log("root area 2, roots destroyed #" + totalRoots);
         }
-        else if (areaDestroyed3.totalRootsBool == true)
+        else if (areaDestroyed3.totalRootsDestroyed == 1)
         {
             totalRoots += 1;
-            areaDestroyed3.totalRootsBool = false;
-            Debug.Log("roots destroyed #" + totalRoots);
+            areaDestroyed3.totalRootsDestroyed = 0;
+            Debug.Log("root area 3, roots destroyed #" + totalRoots);
         }
-        else if (areaDestroyed4.totalRootsBool == true)
+        return totalRoots;
+    }
+
+    public int AreRootsDestroyed2(int totalRoots)
+    {
+        if (areaDestroyed4.totalRootsDestroyed == 1)
         {
             totalRoots += 1;
-            areaDestroyed4.totalRootsBool = false;
-            Debug.Log("roots destroyed #" + totalRoots);
+            areaDestroyed4.totalRootsDestroyed = 0;
+            Debug.Log("root area 4, roots destroyed #" + totalRoots);
         }
-        else if (areaDestroyed5.totalRootsBool == true)
+        else if (areaDestroyed5.totalRootsDestroyed == 1)
         {
             totalRoots += 1;
-            areaDestroyed5.totalRootsBool = false;
-            Debug.Log("roots destroyed #" + totalRoots);
+            areaDestroyed5.totalRootsDestroyed = 0;
+            Debug.Log("root area 5, roots destroyed #" + totalRoots);
         }
-        else if (areaDestroyed6.totalRootsBool == true)
+        else if (areaDestroyed6.totalRootsDestroyed == 1)
         {
             totalRoots += 1;
-            areaDestroyed6.totalRootsBool = false;
-            Debug.Log("roots destroyed #" + totalRoots);
+            areaDestroyed6.totalRootsDestroyed = 0;
+            Debug.Log("root area 6, roots destroyed #" + totalRoots);
         }
         return totalRoots;
     }

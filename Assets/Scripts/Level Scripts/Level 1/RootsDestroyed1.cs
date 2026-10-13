@@ -11,7 +11,7 @@ public class RootsDestroyed1 : MonoBehaviour
     private DestroyRoot destroyedBool2;
     private DestroyRoot destroyedBool3;
 
-    private int rootCount;
+    public int rootCount;
     public bool totalRootsBool = false;
     public int totalRootsDestroyed;
     public bool allRootsDestroyed = false;
@@ -26,7 +26,7 @@ public class RootsDestroyed1 : MonoBehaviour
     void Update()
     {
         rootCount = AreRootsGone(rootCount);
-        totalRootsBool = TotalRoots(rootCount, totalRootsBool);
+        totalRootsDestroyed = UpdateTotalRoots(rootCount, totalRootsDestroyed);
         rootCount = ResetRoots(rootCount);
     }
 
@@ -35,7 +35,7 @@ public class RootsDestroyed1 : MonoBehaviour
         if (destroyedBool1.destroyedRoot == true)
         {
             roots += 1;
-            Debug.Log("roots gone =" + roots);
+            Debug.Log("roots gone =" + roots );
             destroyedBool1.destroyedRoot = false;
         }
         else if (destroyedBool2.destroyedRoot == true)
@@ -53,11 +53,12 @@ public class RootsDestroyed1 : MonoBehaviour
         return roots;
     }
 
-    public bool TotalRoots(int roots, bool totalRoots)
+    public int UpdateTotalRoots(int roots, int totalRoots)
     {
         if (roots == 3)
         {
-            totalRoots = true;
+            Debug.Log("updated total roots");
+            totalRoots += 1;
         }
         return totalRoots;
     }
