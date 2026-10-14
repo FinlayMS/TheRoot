@@ -18,19 +18,19 @@ public class Level2Trigger : MonoBehaviour
     {
         if (counter.activateLevel2Trigger == true)
         {
+            StartCoroutine(StartTransition());
             if (startTransition == true)
             {
-                fadeInStart.SetActive(true);
-                Debug.Log("level transition triggered");
                 SceneManager.LoadScene("Level1_Level2");
             }
         }
     }
 
-    IEnumerator OnTriggerEnter(Collider player)
+    IEnumerator StartTransition()
     {
-        startTransition = true;
+        fadeInStart.SetActive(true);
         yield return new WaitForSeconds(3);
+        startTransition = true;
 
     }
 }

@@ -38,13 +38,13 @@ public class RootsDestroyed1 : MonoBehaviour
             Debug.Log("roots gone =" + roots );
             destroyedBool1.destroyedRoot = false;
         }
-        else if (destroyedBool2.destroyedRoot == true)
+        if (destroyedBool2.destroyedRoot == true)
         {
             roots += 1;
             Debug.Log("roots gone =" + roots);
             destroyedBool2.destroyedRoot = false;
         }
-        else if (destroyedBool3.destroyedRoot == true)
+        if (destroyedBool3.destroyedRoot == true)
         {
             roots += 1;
             Debug.Log("roots gone =" + roots);

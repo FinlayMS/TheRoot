@@ -20,8 +20,7 @@ public class L1NotDone : MonoBehaviour
     {
         if (bool_script.activateLevel2Trigger == true)
         {
-            byebye.SetActive(true);
-            Destroy(byebye);
+            byebye.SetActive(false);
             Debug.Log("TEXT GONE");
         }
         return byebye;

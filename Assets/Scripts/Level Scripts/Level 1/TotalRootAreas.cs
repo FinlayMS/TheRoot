@@ -44,20 +44,22 @@ public class TotalRootAreas : MonoBehaviour
         if (areaDestroyed1.totalRootsDestroyed == 1)
         {
             totalRoots += 1;
-            areaDestroyed1.totalRootsDestroyed = 0;
             Debug.Log("root area 1, roots destroyed #" + totalRoots);
+            rootArea1.SetActive(false);
         }
         else if (areaDestroyed2.totalRootsDestroyed == 1)
         {
             totalRoots += 1;
             areaDestroyed2.totalRootsDestroyed = 0;
             Debug.Log("root area 2, roots destroyed #" + totalRoots);
+            rootArea2.SetActive(false);
         }
         else if (areaDestroyed3.totalRootsDestroyed == 1)
         {
             totalRoots += 1;
             areaDestroyed3.totalRootsDestroyed = 0;
             Debug.Log("root area 3, roots destroyed #" + totalRoots);
+            rootArea3.SetActive(false);
         }
         return totalRoots;
     }
@@ -69,18 +71,21 @@ public class TotalRootAreas : MonoBehaviour
             totalRoots += 1;
             areaDestroyed4.totalRootsDestroyed = 0;
             Debug.Log("root area 4, roots destroyed #" + totalRoots);
+            rootArea4.SetActive(false);
         }
         else if (areaDestroyed5.totalRootsDestroyed == 1)
         {
             totalRoots += 1;
             areaDestroyed5.totalRootsDestroyed = 0;
             Debug.Log("root area 5, roots destroyed #" + totalRoots);
+            rootArea5.SetActive(false);
         }
         else if (areaDestroyed6.totalRootsDestroyed == 1)
         {
             totalRoots += 1;
             areaDestroyed6.totalRootsDestroyed = 0;
             Debug.Log("root area 6, roots destroyed #" + totalRoots);
+            rootArea6.SetActive(false);
         }
         return totalRoots;
     }
