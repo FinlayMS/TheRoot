@@ -44,6 +44,7 @@ public class TotalRootAreas : MonoBehaviour
         if (areaDestroyed1.totalRootsDestroyed == 1)
         {
             totalRoots += 1;
+            areaDestroyed1.totalRootsDestroyed = 0;
             Debug.Log("root area 1, roots destroyed #" + totalRoots);
             rootArea1.SetActive(false);
         }
