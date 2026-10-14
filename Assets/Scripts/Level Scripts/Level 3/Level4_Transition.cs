@@ -9,6 +9,7 @@ public class Level4_Transition : MonoBehaviour
     public GameObject pickaxe;
     private PickUpPickaxe pickedUp;
     private bool startTransition;
+    private bool hasPlayed;
 
     private AudioSource hitRock;
 
@@ -16,6 +17,7 @@ public class Level4_Transition : MonoBehaviour
     {
         pickedUp = pickaxe.GetComponent<PickUpPickaxe>();
         startTransition = false;
+        hasPlayed = true;
         hitRock = GetComponent<AudioSource>();
     }
     private void Update()
@@ -25,6 +27,7 @@ public class Level4_Transition : MonoBehaviour
             StartCoroutine(StartTransition());
             if (startTransition == true)
             {
+                Debug.Log("transition loaded");
                 SceneManager.LoadScene("Level3_Level4");
             }
         }
@@ -34,10 +37,17 @@ public class Level4_Transition : MonoBehaviour
     {
         fadeOutStart.SetActive(true);
         yield return new WaitForSeconds(3);
-        hitRock.Play();
+
+        if (hasPlayed == true)
+        {
+            hitRock.Play();
+            hasPlayed = false;
+        }
+
         yield return new WaitForSeconds(2);
         startTransition = true;
         Debug.Log("transition started");
 
     }
+
 }

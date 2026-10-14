@@ -11,6 +11,7 @@ public class PickUpPickaxe : MonoBehaviour, IInteract
     private void Start()
     {
         isInteracted = false;
+        gameObject.SetActive(true);
     }
 
     public void Interact()
