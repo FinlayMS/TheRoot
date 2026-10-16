@@ -27,7 +27,7 @@ public class Level5Transition : MonoBehaviour
             if (startTransition == true)
             {
                 Debug.Log("transition loaded");
-                SceneManager.LoadScene("Level4_Level5");
+                SceneManager.LoadScene("Level5_RedForest");
             }
         }
     }
