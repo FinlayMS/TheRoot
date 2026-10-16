@@ -18,6 +18,7 @@ public class TotalRootAreas : MonoBehaviour
     private RootsDestroyed1 areaDestroyed6;
 
     public int totalRootAreasDestroyed;
+    public bool hideText;
     public bool activateLevel2Trigger;
 
 
@@ -29,17 +30,18 @@ public class TotalRootAreas : MonoBehaviour
         areaDestroyed4 = rootArea4.GetComponent<RootsDestroyed1>();
         areaDestroyed5 = rootArea5.GetComponent<RootsDestroyed1>();
         areaDestroyed6 = rootArea6.GetComponent<RootsDestroyed1>();
+
+        hideText = false;
     }
 
-    // Update is called once per frame
     void Update()
     {
-        totalRootAreasDestroyed = AreRootAreasDestroyed1(totalRootAreasDestroyed);
-        totalRootAreasDestroyed = AreRootAreasDestroyed2(totalRootAreasDestroyed);
-        activateLevel2Trigger = AllRootsDestroyed(totalRootAreasDestroyed, activateLevel2Trigger);
+        totalRootAreasDestroyed = AreRootAreasDestroyed(totalRootAreasDestroyed);
+        activateLevel2Trigger = AllRootsDestroyed(activateLevel2Trigger);
+        hideText = HideRootText(hideText);
     }
 
-    public int AreRootAreasDestroyed1(int totalRoots)
+    public int AreRootAreasDestroyed(int totalRoots)
     {
         if (areaDestroyed1.totalRootsDestroyed == 1)
         {
@@ -62,11 +64,6 @@ public class TotalRootAreas : MonoBehaviour
             Debug.Log("root area 3, roots destroyed #" + totalRoots);
             rootArea3.SetActive(false);
         }
-        return totalRoots;
-    }
-
-    public int AreRootAreasDestroyed2(int totalRoots)
-    {
         if (areaDestroyed4.totalRootsDestroyed == 1)
         {
             totalRoots += 1;
@@ -91,13 +88,23 @@ public class TotalRootAreas : MonoBehaviour
         return totalRoots;
     }
 
-    public bool AllRootsDestroyed(int totalRoots, bool activateLevel2)
+
+    public bool AllRootsDestroyed(bool activateLevel2)
     {
-        if (totalRoots >= 6)
+        if (rootArea1.activeSelf == false && rootArea2.activeSelf == false && rootArea3.activeSelf == false && rootArea4.activeSelf == false && rootArea5.activeSelf == false && rootArea6.activeSelf == false)
         {
+            Debug.Log("ooga booga all roots gone");
             activateLevel2 = true;
-            Debug.Log("all roots destroyed");
         }
         return activateLevel2;
+    }
+
+    public bool HideRootText(bool hideTheText)
+    {
+        if (areaDestroyed1.byebyeText == true || areaDestroyed2.byebyeText == true || areaDestroyed3.byebyeText == true || areaDestroyed4.byebyeText == true || areaDestroyed5.byebyeText == true || areaDestroyed6.byebyeText == true)
+        {
+            hideTheText = true;
+        }
+        return hideTheText;
     }
 }

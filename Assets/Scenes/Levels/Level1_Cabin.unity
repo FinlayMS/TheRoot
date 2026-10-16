@@ -211,7 +211,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 98af2219203654446a379b1abcb3fe53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::RemoveText
-  byebye: {fileID: 1485475993}
+  totalRootCounter: {fileID: 1961859470}
 --- !u!1 &6820472
 GameObject:
   m_ObjectHideFlags: 0
@@ -3875,7 +3875,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b77e1806ffe3d114d9db9022db0a67f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DestroyRoot
-  byebyeText: 0
   destroyedRoot: 0
 --- !u!114 &56526901
 MonoBehaviour:
@@ -4277,16 +4276,15 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 69786225}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.66548, y: -0, z: 4.50405}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -2.382155, y: -0.52178955, z: -15.345951}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1485475994}
   - {fileID: 1730210666}
   - {fileID: 1567876273}
-  - {fileID: 302149349}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1961859471}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &69786227
 MonoBehaviour:
@@ -4300,12 +4298,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f2db966ab56258044b221458e7d33b6d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::RootsDestroyed1
-  root1: {fileID: 1485475993}
-  root2: {fileID: 1730210665}
-  root3: {fileID: 1567876272}
   rootCount: 0
-  totalRootsBool: 0
   totalRootsDestroyed: 0
+  byebyeText: 0
   allRootsDestroyed: 0
 --- !u!1 &70295669
 GameObject:
@@ -17075,7 +17070,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b77e1806ffe3d114d9db9022db0a67f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DestroyRoot
-  byebyeText: 0
   destroyedRoot: 0
 --- !u!114 &294733440
 MonoBehaviour:
@@ -18535,7 +18529,7 @@ GameObject:
   - component: {fileID: 302149353}
   - component: {fileID: 302149352}
   - component: {fileID: 302149351}
-  - component: {fileID: 302149350}
+  - component: {fileID: 302149354}
   m_Layer: 0
   m_Name: Text Trigger Root (1)
   m_TagString: Untagged
@@ -18552,25 +18546,12 @@ Transform:
   m_GameObject: {fileID: 302149348}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0.7032844, z: -0, w: 0.7109087}
-  m_LocalPosition: {x: -5.43, y: 1.13763, z: 0.02}
-  m_LocalScale: {x: 3.3217943, y: 5.6164064, z: 2.2510178}
+  m_LocalPosition: {x: 0.90452003, y: 0.90556, z: -0.14347029}
+  m_LocalScale: {x: 3.3217947, y: 5.6164064, z: 2.2510178}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 69786226}
+  m_Father: {fileID: 1919932750}
   m_LocalEulerAnglesHint: {x: 0, y: -89.382, z: 0}
---- !u!114 &302149350
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 302149348}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e6a1d65f66bb1c54e84c1452d0de7a7e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Trigger
-  uiObj: {fileID: 6528537}
 --- !u!65 &302149351
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -18649,6 +18630,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 302149348}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &302149354
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 302149348}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de4abfa47b9fed841bb9b4d0affdb241, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::RootTextTrigger
+  uiObj: {fileID: 6528537}
 --- !u!43 &312208230
 Mesh:
   m_ObjectHideFlags: 0
@@ -21965,15 +21959,14 @@ Transform:
   m_GameObject: {fileID: 367081550}
   serializedVersion: 2
   m_LocalRotation: {x: -0.18646872, y: -0.6820773, z: -0.18646875, w: 0.6820773}
-  m_LocalPosition: {x: -9.843, y: 0.521, z: 1.5700002}
+  m_LocalPosition: {x: -6.559675, y: -0.0007895231, z: -18.28}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 294733433}
   - {fileID: 2115499147}
   - {fileID: 1832464915}
-  - {fileID: 993942078}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1961859471}
   m_LocalEulerAnglesHint: {x: -30.58, y: -90, z: 0}
 --- !u!114 &367081552
 MonoBehaviour:
@@ -21987,12 +21980,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f2db966ab56258044b221458e7d33b6d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::RootsDestroyed1
-  root1: {fileID: 294733432}
-  root2: {fileID: 2115499146}
-  root3: {fileID: 1832464914}
   rootCount: 0
-  totalRootsBool: 0
   totalRootsDestroyed: 0
+  byebyeText: 0
   allRootsDestroyed: 0
 --- !u!1 &368470393
 GameObject:
@@ -32766,7 +32756,7 @@ GameObject:
   - component: {fileID: 684745253}
   - component: {fileID: 684745252}
   - component: {fileID: 684745251}
-  - component: {fileID: 684745250}
+  - component: {fileID: 684745254}
   m_Layer: 0
   m_Name: Text Trigger Root (3)
   m_TagString: Untagged
@@ -32782,26 +32772,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 684745248}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.009318771, y: -0.7037952, z: 0.023046663, w: 0.7099678}
-  m_LocalPosition: {x: -5.293, y: 1.344, z: -0.14}
-  m_LocalScale: {x: 4.2930884, y: 5.616407, z: 3.0431082}
+  m_LocalRotation: {x: -0.0009829383, y: -0.9997281, z: 0.022923036, w: 0.004164815}
+  m_LocalPosition: {x: 8.915524, y: 0.99416864, z: -8.390522}
+  m_LocalScale: {x: 4.293089, y: 5.6164064, z: 3.043108}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1816099713}
+  m_Father: {fileID: 1919932750}
   m_LocalEulerAnglesHint: {x: 2.505, y: -90.924, z: -30.488}
---- !u!114 &684745250
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 684745248}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e6a1d65f66bb1c54e84c1452d0de7a7e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Trigger
-  uiObj: {fileID: 6528537}
 --- !u!65 &684745251
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -32880,6 +32857,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 684745248}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &684745254
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 684745248}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de4abfa47b9fed841bb9b4d0affdb241, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::RootTextTrigger
+  uiObj: {fileID: 6528537}
 --- !u!1 &685781626
 GameObject:
   m_ObjectHideFlags: 0
@@ -34270,7 +34260,7 @@ GameObject:
   - component: {fileID: 717501022}
   - component: {fileID: 717501021}
   - component: {fileID: 717501020}
-  - component: {fileID: 717501019}
+  - component: {fileID: 717501023}
   m_Layer: 0
   m_Name: Text Trigger Root (6)
   m_TagString: Untagged
@@ -34287,25 +34277,12 @@ Transform:
   m_GameObject: {fileID: 717501017}
   serializedVersion: 2
   m_LocalRotation: {x: -0.015162565, y: -0.70254004, z: 0.017219268, w: 0.7112744}
-  m_LocalPosition: {x: -6.73, y: 1.67, z: 0.2}
-  m_LocalScale: {x: 4.160549, y: 5.6164055, z: 2.6113534}
+  m_LocalPosition: {x: 16.543, y: 1.48493, z: 2.2424798}
+  m_LocalScale: {x: 4.160548, y: 5.6164064, z: 2.6113534}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 2074143745}
+  m_Father: {fileID: 1919932750}
   m_LocalEulerAnglesHint: {x: 0.15, y: -89.289, z: 2.625}
---- !u!114 &717501019
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 717501017}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e6a1d65f66bb1c54e84c1452d0de7a7e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Trigger
-  uiObj: {fileID: 6528537}
 --- !u!65 &717501020
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -34384,6 +34361,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 717501017}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &717501023
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 717501017}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de4abfa47b9fed841bb9b4d0affdb241, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::RootTextTrigger
+  uiObj: {fileID: 6528537}
 --- !u!1 &724413832
 GameObject:
   m_ObjectHideFlags: 0
@@ -36706,7 +36696,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b77e1806ffe3d114d9db9022db0a67f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DestroyRoot
-  byebyeText: 0
   destroyedRoot: 0
 --- !u!114 &769024499
 MonoBehaviour:
@@ -40075,7 +40064,7 @@ GameObject:
   - component: {fileID: 827803386}
   - component: {fileID: 827803385}
   - component: {fileID: 827803384}
-  - component: {fileID: 827803383}
+  - component: {fileID: 827803387}
   m_Layer: 0
   m_Name: Text Trigger Root (5)
   m_TagString: Untagged
@@ -40091,26 +40080,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 827803381}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.009318774, y: -0.7037952, z: 0.023046667, w: 0.70996785}
-  m_LocalPosition: {x: -6.842, y: 2.149, z: -0.772}
-  m_LocalScale: {x: 4.5279393, y: 5.616406, z: 2.7695115}
+  m_LocalRotation: {x: -0.0009829397, y: -0.9997281, z: 0.022923043, w: 0.004164815}
+  m_LocalPosition: {x: 14.020378, y: 1.6730759, z: 6.556479}
+  m_LocalScale: {x: 4.52794, y: 5.6164055, z: 2.769512}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1035928007}
+  m_Father: {fileID: 1919932750}
   m_LocalEulerAnglesHint: {x: 2.505, y: -90.924, z: -30.488}
---- !u!114 &827803383
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 827803381}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e6a1d65f66bb1c54e84c1452d0de7a7e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Trigger
-  uiObj: {fileID: 6528537}
 --- !u!65 &827803384
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -40189,6 +40165,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 827803381}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &827803387
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 827803381}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de4abfa47b9fed841bb9b4d0affdb241, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::RootTextTrigger
+  uiObj: {fileID: 6528537}
 --- !u!1 &842768991
 GameObject:
   m_ObjectHideFlags: 0
@@ -46237,7 +46226,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b77e1806ffe3d114d9db9022db0a67f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DestroyRoot
-  byebyeText: 0
   destroyedRoot: 0
 --- !u!114 &987768650
 MonoBehaviour:
@@ -46626,7 +46614,7 @@ GameObject:
   - component: {fileID: 993942082}
   - component: {fileID: 993942081}
   - component: {fileID: 993942080}
-  - component: {fileID: 993942079}
+  - component: {fileID: 993942083}
   m_Layer: 0
   m_Name: Text Trigger Root (2)
   m_TagString: Untagged
@@ -46642,26 +46630,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 993942077}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.2021595, y: -0.6835089, z: -0.1693357, w: 0.6806414}
-  m_LocalPosition: {x: -5.58, y: 0.97, z: -0.25}
-  m_LocalScale: {x: 4.6415815, y: 5.6164064, z: 3.1934087}
+  m_LocalRotation: {x: -0.0009829401, y: -0.9997281, z: 0.022923036, w: 0.0041647847}
+  m_LocalPosition: {x: 2.8657112, y: 0.9968345, z: -8.677521}
+  m_LocalScale: {x: 4.6415834, y: 5.616407, z: 3.1934092}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 367081551}
+  m_Father: {fileID: 1919932750}
   m_LocalEulerAnglesHint: {x: 2.505, y: -90.924, z: -30.488}
---- !u!114 &993942079
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 993942077}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e6a1d65f66bb1c54e84c1452d0de7a7e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Trigger
-  uiObj: {fileID: 6528537}
 --- !u!65 &993942080
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -46740,6 +46715,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 993942077}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &993942083
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 993942077}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de4abfa47b9fed841bb9b4d0affdb241, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::RootTextTrigger
+  uiObj: {fileID: 6528537}
 --- !u!1 &997981732
 GameObject:
   m_ObjectHideFlags: 0
@@ -82662,7 +82650,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b77e1806ffe3d114d9db9022db0a67f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DestroyRoot
-  byebyeText: 0
   destroyedRoot: 0
 --- !u!114 &1024718778
 MonoBehaviour:
@@ -82708,15 +82695,14 @@ Transform:
   m_GameObject: {fileID: 1035928006}
   serializedVersion: 2
   m_LocalRotation: {x: 0.006170608, y: -0.7070799, z: 0.006170608, w: 0.7070799}
-  m_LocalPosition: {x: 1.286, y: -0.257, z: 18.066}
+  m_LocalPosition: {x: 4.5693254, y: -0.7787895, z: -1.7840004}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1050056893}
   - {fileID: 1227535183}
   - {fileID: 1460839744}
-  - {fileID: 827803382}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1961859471}
   m_LocalEulerAnglesHint: {x: 1, y: -90, z: 0}
 --- !u!114 &1035928008
 MonoBehaviour:
@@ -82730,12 +82716,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f2db966ab56258044b221458e7d33b6d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::RootsDestroyed1
-  root1: {fileID: 1050056892}
-  root2: {fileID: 1227535182}
-  root3: {fileID: 1460839743}
   rootCount: 0
-  totalRootsBool: 0
   totalRootsDestroyed: 0
+  byebyeText: 0
   allRootsDestroyed: 0
 --- !u!1 &1043663795
 GameObject:
@@ -84307,7 +84290,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b77e1806ffe3d114d9db9022db0a67f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DestroyRoot
-  byebyeText: 0
   destroyedRoot: 0
 --- !u!114 &1050056900
 MonoBehaviour:
@@ -84473,6 +84455,7 @@ MonoBehaviour:
   rootArea5: {fileID: 1035928006}
   rootArea6: {fileID: 2074143744}
   totalRootAreasDestroyed: 0
+  hideText: 0
   activateLevel2Trigger: 0
 --- !u!43 &1058144683
 Mesh:
@@ -86760,7 +86743,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b77e1806ffe3d114d9db9022db0a67f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DestroyRoot
-  byebyeText: 0
   destroyedRoot: 0
 --- !u!114 &1080260285
 MonoBehaviour:
@@ -92974,7 +92956,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b77e1806ffe3d114d9db9022db0a67f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DestroyRoot
-  byebyeText: 0
   destroyedRoot: 0
 --- !u!114 &1227535190
 MonoBehaviour:
@@ -100148,15 +100129,14 @@ Transform:
   m_GameObject: {fileID: 1404451503}
   serializedVersion: 2
   m_LocalRotation: {x: 0.006170608, y: -0.7070799, z: 0.006170608, w: 0.7070799}
-  m_LocalPosition: {x: 0.539, y: -0.188, z: 1.57}
+  m_LocalPosition: {x: 3.8223252, y: -0.7097895, z: -18.28}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 987768643}
   - {fileID: 2037898770}
   - {fileID: 1508842270}
-  - {fileID: 1436269707}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1961859471}
   m_LocalEulerAnglesHint: {x: 1, y: -90, z: 0}
 --- !u!114 &1404451505
 MonoBehaviour:
@@ -100170,12 +100150,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f2db966ab56258044b221458e7d33b6d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::RootsDestroyed1
-  root1: {fileID: 987768642}
-  root2: {fileID: 2037898769}
-  root3: {fileID: 1508842269}
   rootCount: 0
-  totalRootsBool: 0
   totalRootsDestroyed: 0
+  byebyeText: 0
   allRootsDestroyed: 0
 --- !u!43 &1406438269
 Mesh:
@@ -101798,7 +101775,7 @@ GameObject:
   - component: {fileID: 1436269711}
   - component: {fileID: 1436269710}
   - component: {fileID: 1436269709}
-  - component: {fileID: 1436269708}
+  - component: {fileID: 1436269712}
   m_Layer: 0
   m_Name: Text Trigger Root (4)
   m_TagString: Untagged
@@ -101814,26 +101791,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1436269706}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.009318772, y: -0.7037952, z: 0.023046665, w: 0.70996785}
-  m_LocalPosition: {x: -5.28, y: 1.4, z: -0.46}
-  m_LocalScale: {x: 4.866098, y: 5.6164064, z: 3.2306733}
+  m_LocalRotation: {x: -0.0009829393, y: -0.9997281, z: 0.02292304, w: 0.004164815}
+  m_LocalPosition: {x: 12.974497, y: 0.9877449, z: -8.3775215}
+  m_LocalScale: {x: 4.8660994, y: 5.616406, z: 3.2306733}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1404451504}
+  m_Father: {fileID: 1919932750}
   m_LocalEulerAnglesHint: {x: 2.505, y: -90.924, z: -30.488}
---- !u!114 &1436269708
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1436269706}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e6a1d65f66bb1c54e84c1452d0de7a7e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Trigger
-  uiObj: {fileID: 6528537}
 --- !u!65 &1436269709
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -101912,6 +101876,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1436269706}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1436269712
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1436269706}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de4abfa47b9fed841bb9b4d0affdb241, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::RootTextTrigger
+  uiObj: {fileID: 6528537}
 --- !u!43 &1440529508
 Mesh:
   m_ObjectHideFlags: 0
@@ -103483,7 +103460,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b77e1806ffe3d114d9db9022db0a67f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DestroyRoot
-  byebyeText: 0
   destroyedRoot: 0
 --- !u!114 &1460839751
 MonoBehaviour:
@@ -104896,7 +104872,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b77e1806ffe3d114d9db9022db0a67f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DestroyRoot
-  byebyeText: 0
   destroyedRoot: 0
 --- !u!114 &1485476001
 MonoBehaviour:
@@ -106918,7 +106893,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b77e1806ffe3d114d9db9022db0a67f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DestroyRoot
-  byebyeText: 0
   destroyedRoot: 0
 --- !u!114 &1508842277
 MonoBehaviour:
@@ -111047,7 +111021,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b77e1806ffe3d114d9db9022db0a67f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DestroyRoot
-  byebyeText: 0
   destroyedRoot: 0
 --- !u!114 &1567876280
 MonoBehaviour:
@@ -112210,7 +112183,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b77e1806ffe3d114d9db9022db0a67f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DestroyRoot
-  byebyeText: 0
   destroyedRoot: 0
 --- !u!114 &1575903883
 MonoBehaviour:
@@ -120591,7 +120563,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b77e1806ffe3d114d9db9022db0a67f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DestroyRoot
-  byebyeText: 0
   destroyedRoot: 0
 --- !u!114 &1730210673
 MonoBehaviour:
@@ -125139,15 +125110,14 @@ Transform:
   m_GameObject: {fileID: 1816099712}
   serializedVersion: 2
   m_LocalRotation: {x: 0.006170608, y: -0.7070799, z: 0.006170608, w: 0.7070799}
-  m_LocalPosition: {x: -3.201, y: -0.12, z: 1.57}
+  m_LocalPosition: {x: 0.08232522, y: -0.64178956, z: -18.28}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 769024492}
   - {fileID: 2063762381}
   - {fileID: 1080260278}
-  - {fileID: 684745249}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1961859471}
   m_LocalEulerAnglesHint: {x: 1, y: -90, z: 0}
 --- !u!114 &1816099714
 MonoBehaviour:
@@ -125161,12 +125131,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f2db966ab56258044b221458e7d33b6d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::RootsDestroyed1
-  root1: {fileID: 769024491}
-  root2: {fileID: 2063762380}
-  root3: {fileID: 1080260277}
   rootCount: 0
-  totalRootsBool: 0
   totalRootsDestroyed: 0
+  byebyeText: 0
   allRootsDestroyed: 0
 --- !u!43 &1817230566
 Mesh:
@@ -127711,7 +127678,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b77e1806ffe3d114d9db9022db0a67f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DestroyRoot
-  byebyeText: 0
   destroyedRoot: 0
 --- !u!114 &1832464922
 MonoBehaviour:
@@ -130412,6 +130378,57 @@ Mesh:
       - serializedVersion: 1
         m_IndexStart: 0
         m_IndexCount: 0
+--- !u!1 &1919932749
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1919932750}
+  - component: {fileID: 1919932751}
+  m_Layer: 0
+  m_Name: Text Triggers (Roots)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1919932750
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1919932749}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -12, y: 0.23207, z: 4.66752}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 302149349}
+  - {fileID: 993942078}
+  - {fileID: 684745249}
+  - {fileID: 1436269707}
+  - {fileID: 827803382}
+  - {fileID: 717501018}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1919932751
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1919932749}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 035fad2c776e0f7449f42c0db177908e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TextTriggerManager
+  totalRootCounter: {fileID: 1961859470}
 --- !u!1 &1920035937
 GameObject:
   m_ObjectHideFlags: 0
@@ -132763,7 +132780,13 @@ Transform:
   m_LocalPosition: {x: -3.2833252, y: 0.52178955, z: 19.85}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 69786226}
+  - {fileID: 367081551}
+  - {fileID: 1816099713}
+  - {fileID: 1404451504}
+  - {fileID: 1035928007}
+  - {fileID: 2074143745}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1961859472
@@ -132785,6 +132808,7 @@ MonoBehaviour:
   rootArea5: {fileID: 1035928006}
   rootArea6: {fileID: 2074143744}
   totalRootAreasDestroyed: 0
+  hideText: 0
   activateLevel2Trigger: 0
 --- !u!1 &1966205365
 GameObject:
@@ -136358,7 +136382,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b77e1806ffe3d114d9db9022db0a67f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DestroyRoot
-  byebyeText: 0
   destroyedRoot: 0
 --- !u!114 &2037898777
 MonoBehaviour:
@@ -138484,7 +138507,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b77e1806ffe3d114d9db9022db0a67f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DestroyRoot
-  byebyeText: 0
   destroyedRoot: 0
 --- !u!114 &2063762388
 MonoBehaviour:
@@ -139066,16 +139088,15 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2074143744}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 11.273, y: 0.047, z: 6.71}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 14.556325, y: -0.47478956, z: -13.14}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1575903876}
   - {fileID: 56526894}
   - {fileID: 1024718771}
-  - {fileID: 717501018}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1961859471}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2074143746
 MonoBehaviour:
@@ -139089,12 +139110,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f2db966ab56258044b221458e7d33b6d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::RootsDestroyed1
-  root1: {fileID: 1575903875}
-  root2: {fileID: 56526893}
-  root3: {fileID: 1024718770}
   rootCount: 0
-  totalRootsBool: 0
   totalRootsDestroyed: 0
+  byebyeText: 0
   allRootsDestroyed: 0
 --- !u!1 &2075046610
 GameObject:
@@ -141276,7 +141294,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b77e1806ffe3d114d9db9022db0a67f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DestroyRoot
-  byebyeText: 0
   destroyedRoot: 0
 --- !u!114 &2115499154
 MonoBehaviour:
@@ -142597,12 +142614,7 @@ SceneRoots:
   - {fileID: 653403191}
   - {fileID: 572525160}
   - {fileID: 1961859471}
+  - {fileID: 780779216}
   - {fileID: 1135056113}
   - {fileID: 1404250495}
-  - {fileID: 69786226}
-  - {fileID: 367081551}
-  - {fileID: 1816099713}
-  - {fileID: 1404451504}
-  - {fileID: 1035928007}
-  - {fileID: 2074143745}
-  - {fileID: 780779216}
+  - {fileID: 1919932750}

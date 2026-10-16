@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class DestroyRoot : MonoBehaviour, IInteract
 {
-    public bool byebyeText = false;
     public bool destroyedRoot = false;
 
     public void Start()
@@ -15,7 +14,6 @@ public class DestroyRoot : MonoBehaviour, IInteract
     public void Interact()
     {
         destroyedRoot = true;
-        byebyeText = true;
         gameObject.SetActive(false);
     }
 

@@ -4,11 +4,12 @@ using UnityEngine;
 
 public class Trigger : MonoBehaviour
 {
-    [SerializeField] public GameObject uiObj;
+    public GameObject uiObj;
 
     private void Start()
     {
         uiObj.SetActive(false);
+
     }
 
     private void OnTriggerEnter(Collider player) // upd8 called once per frame

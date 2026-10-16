@@ -2,24 +2,19 @@ using UnityEngine;
 
 public class RemoveText : MonoBehaviour
 {
-    public GameObject byebye;
-    private DestroyRoot bool_script;
-   
-    void Start()
+    public GameObject totalRootCounter;
+    private TotalRootAreas totalRoots;
+
+    private void Start()
     {
-        bool_script = byebye.GetComponent<DestroyRoot>();
+        totalRoots = totalRootCounter.GetComponent<TotalRootAreas>();
     }
 
     void Update()
     {
-        removeTheText();
-    }
-
-    public void removeTheText()
-    {
-        if (bool_script.byebyeText == true)
+        if (totalRoots.hideText == true)
         {
-            byebye.SetActive(false);
+            Destroy(gameObject);
         }
     }
 }

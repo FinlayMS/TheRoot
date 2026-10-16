@@ -3,52 +3,39 @@ using UnityEngine;
 
 public class RootsDestroyed1 : MonoBehaviour
 {
-    public GameObject root1;
-    public GameObject root2;
-    public GameObject root3;
-
-    private DestroyRoot destroyedBool1;
-    private DestroyRoot destroyedBool2;
-    private DestroyRoot destroyedBool3;
-
     public int rootCount;
-    public bool totalRootsBool = false;
     public int totalRootsDestroyed;
+    public bool byebyeText = false;
     public bool allRootsDestroyed = false;
+    private DestroyRoot[] _roots;
 
-    void Start()
+    void Awake()
     {
-        destroyedBool1 = root1.GetComponent<DestroyRoot>();
-        destroyedBool2 = root2.GetComponent<DestroyRoot>();
-        destroyedBool3 = root3.GetComponent<DestroyRoot>();
+        _roots = new DestroyRoot[transform.childCount];
+        for (int i = 0; i < _roots.Length; i++)
+            _roots[i] = transform.GetChild(i).GetComponent<DestroyRoot>();
+
+        _roots = GetComponentsInChildren<DestroyRoot>();
     }
 
     void Update()
     {
         rootCount = AreRootsGone(rootCount);
         totalRootsDestroyed = UpdateTotalRoots(rootCount, totalRootsDestroyed);
+        byebyeText = UpdateTextBool(rootCount, byebyeText);
         rootCount = ResetRoots(rootCount);
     }
 
     public int AreRootsGone(int roots)
     {
-        if (destroyedBool1.destroyedRoot == true)
+        foreach (DestroyRoot root in _roots)
         {
-            roots += 1;
-            Debug.Log("roots gone =" + roots );
-            destroyedBool1.destroyedRoot = false;
-        }
-        if (destroyedBool2.destroyedRoot == true)
-        {
-            roots += 1;
-            Debug.Log("roots gone =" + roots);
-            destroyedBool2.destroyedRoot = false;
-        }
-        if (destroyedBool3.destroyedRoot == true)
-        {
-            roots += 1;
-            Debug.Log("roots gone =" + roots);
-            destroyedBool3.destroyedRoot = false;
+            if (root.destroyedRoot == true)
+            {
+                roots += 1;
+                Debug.Log("roots gone =" + roots);
+                root.destroyedRoot = false;
+            }
         }
         return roots;
     }
@@ -62,7 +49,16 @@ public class RootsDestroyed1 : MonoBehaviour
         }
         return totalRoots;
     }
-
+    public bool UpdateTextBool(int roots, bool byeText)
+    {
+        if (roots == 3)
+        {
+            Debug.Log("updated total roots");
+            byeText = true;
+        }
+        return byeText;
+    }
+ 
     public int ResetRoots(int roots)
     {
         if (roots == 3)
