@@ -43,7 +43,7 @@ public class Level5Transition : MonoBehaviour
             hasPlayed = false;
         }
 
-        yield return new WaitForSeconds(2);
+        yield return new WaitForSeconds(7);
         startTransition = true;
         Debug.Log("transition started");
 

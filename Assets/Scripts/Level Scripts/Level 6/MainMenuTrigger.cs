@@ -11,6 +11,7 @@ public class MainMenuTrigger : MonoBehaviour
     public GameObject fadeOut;
     public GameObject fadeIn;
     public GameObject thanksText;
+    public GameObject sfx;
     private TriggerCutscene triggered;
     private bool startTransition;
 
@@ -39,6 +40,7 @@ public class MainMenuTrigger : MonoBehaviour
     IEnumerator StartTransition()
     {
         blackScreen.SetActive(true);
+        sfx.SetActive(false);
         yield return new WaitForSeconds(22);
         canvas.SetActive(false);
         video.SetActive(false);

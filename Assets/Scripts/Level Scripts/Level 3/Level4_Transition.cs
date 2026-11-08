@@ -44,7 +44,7 @@ public class Level4_Transition : MonoBehaviour
             hasPlayed = false;
         }
 
-        yield return new WaitForSeconds(2);
+        yield return new WaitForSeconds(9);
         startTransition = true;
         Debug.Log("transition started");
 

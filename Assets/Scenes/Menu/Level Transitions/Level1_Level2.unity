@@ -189,9 +189,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'To survive this monster, I must first track down
-
-    this evil, then sever its leeching grasp. '
+  m_Text: 'To survive this monster, I must first track down this evil, then sever its leeching grasp. '
 --- !u!222 &28615242
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -534,7 +532,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -30, y: -500}
+  m_AnchoredPosition: {x: -90, y: -500}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &676913295
@@ -559,8 +557,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Click to Continue.
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 4ac7afd79fa949b47b03849750345f9b, type: 2}
+  m_sharedMaterial: {fileID: -3419223658176650366, guid: 4ac7afd79fa949b47b03849750345f9b, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
